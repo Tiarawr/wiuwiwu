@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <header className="w-full h-[90px] bg-[#B56868] flex items-center justify-between px-[60px] relative z-10">
@@ -8,25 +10,34 @@ export default function Header() {
           alt="Logo Vector"
           className="w-[40px] h-[44px]"
         />
-        <span className="text-white text-[24px] font-semibold font-poppins">
+        <Link
+          to="/"
+          className="text-white text-[24px] font-semibold font-poppins"
+        >
           checkmykicks
-        </span>
+        </Link>
       </div>
 
       {/* Right: Menu */}
       <nav className="flex gap-12">
-        <a
-          href="#explore"
+        <Link
+          to="/explore"
           className="text-white/75 text-[16px] font-semibold uppercase tracking-[0.15em] font-open"
         >
           Explore
-        </a>
+        </Link>
         <a
           href="#contact"
           className="text-white/75 text-[16px] font-semibold uppercase tracking-[0.15em] font-open"
         >
           Contact Us
         </a>
+        <Link
+          to="/login"
+          className="text-white/75 text-[16px] font-semibold uppercase tracking-[0.15em] font-open"
+        >
+          SIGN IN
+        </Link>
       </nav>
     </header>
   );

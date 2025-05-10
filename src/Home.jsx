@@ -20,6 +20,7 @@ export default function Home() {
             Welcome to{" "}
             <span className="text-[#B56868] font-bold">checkmykicks</span>
           </h1>
+          
         </AnimatedContent>
       </div>
 

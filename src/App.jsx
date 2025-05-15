@@ -3,7 +3,7 @@ import Header from "./Header";
 import Home from "./Home";
 import Explore from "./Explore";
 import AuthenticSection from "./AuthenticSection";
-import Login from "./login";
+import CheckMyKicks from "./CheckMyKicks";
 
 export default function App() {
   const location = useLocation();
@@ -21,11 +21,11 @@ export default function App() {
             <>
               <Home />
               <AuthenticSection />
+              <CheckMyKicks />
             </>
           }
         />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );

@@ -32,12 +32,6 @@ export default function Header() {
         >
           Contact Us
         </a>
-        <Link
-          to="/login"
-          className="text-white/75 text-[16px] font-semibold uppercase tracking-[0.15em] font-open"
-        >
-          SIGN IN
-        </Link>
       </nav>
     </header>
   );

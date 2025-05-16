@@ -4,6 +4,7 @@ import Home from "./Home";
 import Explore from "./Explore";
 import AuthenticSection from "./AuthenticSection";
 import CheckMyKicks from "./CheckMyKicks";
+import CheckNow from "./CheckNow";
 
 export default function App() {
   const location = useLocation();
@@ -11,7 +12,6 @@ export default function App() {
 
   return (
     <>
-      {/* Header hanya muncul kalau bukan di halaman login */}
       {!isLoginPage && <Header />}
 
       <Routes>
@@ -26,6 +26,7 @@ export default function App() {
           }
         />
         <Route path="/explore" element={<Explore />} />
+        <Route path="/checknow" element={<CheckNow />} />
       </Routes>
     </>
   );

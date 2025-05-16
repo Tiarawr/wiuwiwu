@@ -15,6 +15,16 @@ export default function Explore() {
       image: "https://placehold.co/250x250",
       status: "PASS",
     },
+    {
+      name: "Nike Air Max 270 React",
+      image: "https://placehold.co/250x250",
+      status: "Pass",
+    },
+    {
+      name: "Nike Air Max 270 React",
+      image: "https://placehold.co/250x250",
+      status: "PASS",
+    },
   ];
 
   return (
@@ -26,31 +36,33 @@ export default function Explore() {
       </h2>
 
       {/* Card Container */}
-      <div className="flex flex-wrap justify-center gap-8 px-4">
-        {shoes.map((shoe, index) => (
-          <div
-            key={index}
-            className="w-72 h-96 bg-white rounded-[20px] border border-zinc-300 flex flex-col items-center gap-4 p-4"
-          >
-            <img
-              src={shoe.image}
-              alt={shoe.name}
-              className="w-[250px] h-[250px] object-cover"
-            />
-            <div className="text-[#444343] text-[20px] font-semibold font-open">
-              {shoe.name}
-            </div>
+      <div className="w-full flex justify-center">
+        <div className="flex flex-wrap justify-start gap-6 px-4 max-w-[1200px]">
+          {shoes.map((shoe, index) => (
             <div
-              className={`px-6 py-2 rounded-[20px] ${
-                shoe.status === "PASS" ? "bg-[#5CC98D]" : "bg-[#E06262]"
-              }`}
+              key={index}
+              className="w-64 h-96 bg-white rounded-[20px] border border-zinc-300 flex flex-col items-center gap-4 p-4"
             >
-              <span className="text-[#FAFAFA] text-[20px] font-bold font-open tracking-[0.02em]">
-                {shoe.status}
-              </span>
+              <img
+                src={shoe.image}
+                alt={shoe.name}
+                className="w-[250px] h-[250px] object-cover"
+              />
+              <div className="text-[#444343] text-[20px] font-semibold font-open">
+                {shoe.name}
+              </div>
+              <div
+                className={`px-6 py-2 rounded-[20px] ${
+                  shoe.status === "PASS" ? "bg-[#5CC98D]" : "bg-[#E06262]"
+                }`}
+              >
+                <span className="text-[#FAFAFA] text-[20px] font-bold font-open tracking-[0.02em]">
+                  {shoe.status}
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

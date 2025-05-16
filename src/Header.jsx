@@ -27,10 +27,22 @@ export default function Header() {
           Explore
         </Link>
         <a
-          href="#contact"
+          href="#work"
           className="text-white/75 text-[16px] font-semibold uppercase tracking-[0.15em] font-open"
         >
-          Contact Us
+          How we work
+        </a>
+        <a
+          href="#why"
+          className="text-white/75 text-[16px] font-semibold uppercase tracking-[0.15em] font-open"
+        >
+          why choose us
+        </a>
+        <a
+          href="#review"
+          className="text-white/75 text-[16px] font-semibold uppercase tracking-[0.15em] font-open"
+        >
+          Review{" "}
         </a>
       </nav>
     </header>

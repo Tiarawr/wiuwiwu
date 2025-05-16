@@ -1,6 +1,9 @@
 import AnimatedContent from "./components/AnimatedContent";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate(); // <- harus tetap di dalam komponen
+
   return (
     <div className="w-full min-h-screen bg-gradient-to-b from-[rgba(244,236,236,0.13)] to-[#9D8A8A] via-transparent overflow-hidden pt-[100px]">
       {/* Welcome Text */}
@@ -16,11 +19,10 @@ export default function Home() {
           threshold={0.2}
           delay={100}
         >
-          <h1 className="text-[40px] font-semibold capitalize font-poppins text-black text-center">
+          <h1 className="text-[40px] font-semibold capitalize font-['Poppins'] text-black text-center">
             Welcome to{" "}
             <span className="text-[#B56868] font-bold">checkmykicks</span>
           </h1>
-          
         </AnimatedContent>
       </div>
 
@@ -46,7 +48,10 @@ export default function Home() {
 
       {/* CTA Button */}
       <div className="flex justify-center mt-4">
-        <button className="w-[201px] h-[69px] bg-[#B56868] text-white font-open font-bold text-[18px] uppercase tracking-[0.17em] rounded-full flex items-center justify-center">
+        <button
+          onClick={() => navigate("/checknow")}
+          className="w-[201px] h-[69px] bg-[#B56868] text-white font-['Open_Sans'] font-bold text-[18px] uppercase tracking-[0.17em] rounded-full flex items-center justify-center cursor-pointer shadow-md transition duration-200 ease-in-out hover:shadow-lg hover:bg-[#a15454] active:scale-95"
+        >
           Check Now
         </button>
       </div>
